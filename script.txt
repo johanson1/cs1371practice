@@ -1,0 +1,1 @@
+wget -O /etc/squid/squid.conf https://raw.githubusercontent.com/johanson1/easy-proxy/master/confg/userpass/squid.conf --no-check-certificate
