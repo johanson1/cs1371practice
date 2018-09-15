@@ -1,1 +1,14 @@
-wget -O /etc/squid/squid.conf https://raw.githubusercontent.com/johanson1/easy-proxy/master/confg/userpass/squid.conf --no-check-certificate
+First part:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+yum -y update
+yum install squid wget httpd-tools -y
+yum install -y nano
+wget -O /etc/squid/squid.conf https://raw.githubusercontent.com/johanson1/cs1371practice/blob/master/squid.conf --no-check-certificate
+nano /etc/squid/squid.conf
+
+second part:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+squid -z
+chkconfig squid on
+service squid start
+tail -F /var/log/squid/access.log
